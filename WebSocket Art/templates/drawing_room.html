@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebSocket Art | Drawing Room</title>
+    </head>
+    <style>
+        .text {
+            color: white;
+        }
+
+        .text1 {
+            color: black;
+        }
+
+        #color-div {
+            position: relative;
+            left: 0px;
+            right: 0px;
+        }
+
+        #size-div {
+            position: relative;
+            left: 0px;
+            top: 10px;
+        }
+    </style>
+    <body style="background-color: black;">
+        <div id="color-div">
+            <label class="text" for="select-color">Change Color: </label>
+            <select class="text" id="select-color" name="select-color">
+                <option class="text1" value="#FF0000">Red</option>
+                <option class="text1" value="#f58c02">Orange</option>
+                <option class="text1" value="#FFFF00">Yellow</option>
+                <option class="text1" value="#00FF00">Green</option>
+                <option class="text1" value="#0000FF">Blue</option>
+                <option class="text1" value="#A020F0">Purple</option>
+                <option class="text1" value="#FFC0CB">Pink</option>
+                <option class="text1" value="#964B00">Brown</option>
+                <option class="text1" value="#808080">Gray</option>
+                <option class="text1" value="#FFFFFF">White</option>
+                <option class="text1" value="#000000">Black (eraser)</option>
+            </select>
+        </div>
+        <div id="size-div">
+            <label class="text" for="set-size">Set Size: </label>
+            <input id="set-size" name="set-size" type="text">
+        </div>
+        <canvas id="canvas" width="966" height="690"></canvas>
+        <script src="https://cdn.socket.io/4.5.4/socket.io.js"></script>
+        <script src="../static/drawing_room.js"></script>
+    </body>
+</html>
